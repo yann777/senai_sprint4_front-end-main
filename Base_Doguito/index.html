@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Doguitos</title> 
+    </head>
+    <body>
+        <h1>SITE DE DOGUINHOS</h1>
+        <div id="dog1">
+            <img id="imagem1" src="images/2.jpeg" alt="Sammy"/> 
+            <h2 id="namedog1">Sammy</h2>
+        </div>
+        <div id="dog2">
+            <img class="imagem2" src="images/3.jpeg" alt="Dragão"/> 
+            <h2 id="namedog2">Dragão</h2>
+        </div>
+        <div id="dog3">
+            <img class="imagem3" src="images/4.jpeg" alt="Milton"/> 
+            <h2 id="namedog3">Milton</h2>
+        </div>
+        <div id="dog4">
+            <img class="imagem4" src="images/5.jpeg" alt="Penny"/> 
+            <h2 id="namedog4">Penny</h2>
+        </div>
+        <div id="dog5">
+            <img class="imagem5" src="images/6.jpeg" alt="Nenem"/> 
+            <h2 id="namedog5">Nenem</h2>
+        </div>
+        <div id="botauns">
+            <input id="btn" type="button" value="Nome dos Spitz" onclick="Spitz();"/> 
+            <input id="btn" type="button" value="Idade Real" onclick="idade();"/> 
+            <input id="btn" type="button" value="Soma todas as Idades" onclick="idadesomada();"/> 
+            <input id="btn" type="button" value="Melhorar Site" onclick="mudaTudo();"/>
+        </div>
+
+        <script type="text/javascript"> 
+            var dogs = [
+            {
+                nome: 'Sammy',
+                idade: 6,
+                raca: 'Samoieda'
+            },
+            {
+                nome: 'Dragão',
+                idade: 5,
+                raca: 'Spitz Alemão'
+            },
+            {
+                nome: 'Milton',
+                idade: 8,
+                raca: 'Spitz Alemão'
+            },
+            {
+                nome: 'Penny',
+                idade: 6,
+                raca: 'Spitz Alemão'
+            },
+            {
+                nome: 'Nenem',
+                idade: 4,
+                raca: 'Spitz Alemão'
+            },
+            ];
+
+           
+
+            function Spitz(){
+                function Spitz(dogs){
+                    return dogs.raca === 'Spitz Alemão'; 
+                }
+                const spitz = dogs.filter(Spitz).map(dog => {alert(dog.nome)})
+
+                var i;
+                for(i = 0; dogs.length; i++){
+                    function dognames(){
+                     dogs[i].nome;
+                    }    
+                    alert(dognames.filter(Spitz));
+                }
+            }
+
+            function idade(){
+                var idade = dogs;
+                var idade = dogs.map(function(item){
+                    return ("Nome: " + item.nome + "-->" + "idade Real: " + item.idade*5 + "anos")
+                });
+                alert(idade); 
+            }
+
+            function idadesomada(){
+                var soma  = dogs.reduce(function(total, item){
+                    return total+item.idade;
+                },0);
+                alert(soma);
+            }
+            
+            function mudaTudo(){
+                document.body.style.backgroundImage = "url(images/fundomirage.png)";
+                document.querySelector("h1").innerHTML = "SÓ AS LENDIAS DO CS:GO";
+                document.querySelector("h1").style.fontSize = "40px";
+                document.querySelector("h1").style.color = "White";
+                
+
+
+                document.querySelector("#dog1").style.background = "none";
+                document.querySelector("#namedog1").innerHTML = "Fallen";
+                document.querySelector("#namedog1").style.color = "Black";
+                document.querySelector("#namedog1").style.fontSize = "20px;"
+                var img = document.querySelector("#imagem1");
+                img.setAttribute("src", "images/fallen.png")
+                document.querySelector("#imagem1").style.width = "400px";
+
+
+
+                document.querySelector("#dog2").style.background = "none";
+                document.querySelector("#namedog2").innerHTML = "Fer";
+                document.querySelector("#namedog2").style.color = "Black";
+                document.querySelector("#namedog2").style.fontSize = "20px;"
+                var img2 = document.querySelector(".imagem2");
+                img2.setAttribute("src", "images/fer.jpg")
+                document.querySelector(".imagem2").style.width = "400px";
+
+
+
+                document.querySelector("#dog3").style.background = "none";
+                document.querySelector("#namedog3").innerHTML = "Coldzera";
+                document.querySelector("#namedog3").style.color = "Black";
+                document.querySelector("#namedog3").style.fontSize = "20px;"
+                var img3 = document.querySelector(".imagem3");
+                img3.setAttribute("src", "images/coldzera.jpg")
+                document.querySelector(".imagem3").style.width = "400px";
+
+
+
+                document.querySelector("#dog4").style.background = "none";
+                document.querySelector("#namedog4").innerHTML = "LUCAS1";
+                document.querySelector("#namedog4").style.color = "Black";
+                document.querySelector("#namedog4").style.fontSize = "20px;"
+                var img4 = document.querySelector(".imagem4");
+                img4.setAttribute("src", "images/lucas1.png")
+                document.querySelector(".imagem4").style.width = "400px";
+
+
+
+                document.querySelector("#dog5").style.background = "none";
+                document.querySelector("#namedog5").innerHTML = "TACO";
+                document.querySelector("#namedog5").style.color = "Black";
+                document.querySelector("#namedog5").style.fontSize = "20px;"
+                var img5 = document.querySelector(".imagem5");
+                img5.setAttribute("src", "images/taco.jpg")
+                document.querySelector(".imagem5").style.width = "400px";
+
+                
+
+            }
+
+
+        </script> 
+    </body>
+</html>
